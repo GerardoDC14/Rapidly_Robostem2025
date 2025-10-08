@@ -1,7 +1,7 @@
 Robostem Interface 2025
 ===================================
 
-Robostem Interface 2025 is a Python-based graphical interface designed to connect computer vision and sensor subsystems used in robotics competitions and field testing.
+This is a Python-based graphical interface designed to connect computer vision and sensor subsystems used in robotics competitions and field testing.
 It integrates video streaming, hazard material (HAZMAT) detection, QR-code recognition, and magnetometer readings into a unified monitoring and control tool.
 
 --------------------------------------------------------------------------------
