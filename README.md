@@ -55,7 +55,6 @@ The interface follows this processing chain:
    - All frames and data are rendered inside a PyQt6 interface with real-time overlays and control widgets.
    - User can toggle subsystems, tune camera parameters, and monitor sensor data simultaneously.
 
-
 --------------------------------------------------------------------------------
 4. Setup Instructions
 --------------------------------------------------------------------------------
@@ -77,27 +76,7 @@ The interface follows this processing chain:
 6. Enable or disable modules using the checkboxes in the GUI.
 
 --------------------------------------------------------------------------------
-6. Code Structure
---------------------------------------------------------------------------------
-
-gui/
- ├── main.py           → Main PyQt6 window, GUI layout, and control logic.
- ├── esp32cam.py       → Manages camera connection and frame acquisition.
- ├── hazmat.py         → Wraps OpenCV DNN model (YOLO) for HAZMAT detection.
- ├── qrscan.py         → QR code detection and annotation.
- └── magnetometer.py   → Connects to HTTP NDJSON stream of FXOS8700 sensor.
-
-models/
- ├── yolo.cfg          → YOLO model configuration.
- ├── yolo.weights      → Pretrained weights (use Git LFS for large file).
- └── labels.names      → List of HAZMAT classes.
-
-firmware/
- ├── ESP32Cam_Server/        → ESP32-CAM HTTP streaming firmware.
- └── Magnetometer_ESP32/     → ESP32 + FXOS8700 JSON streaming firmware.
-
---------------------------------------------------------------------------------
-7. Extending the System
+5. Extending the System
 --------------------------------------------------------------------------------
 
 - To add new detectors, create a new Python module similar to hazmat.py.
@@ -106,10 +85,10 @@ firmware/
 - The GUI is modular: each detection or data source can emit signals that are connected to the interface dynamically.
 
 --------------------------------------------------------------------------------
-8. Requirements
+6. Requirements
 --------------------------------------------------------------------------------
 pyqt6
 opencv-python
 numpy
 requests
---------------------------------------------------------------------------------
+-------------------------------------------------------------------------------- 
