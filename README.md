@@ -55,36 +55,9 @@ The interface follows this processing chain:
    - All frames and data are rendered inside a PyQt6 interface with real-time overlays and control widgets.
    - User can toggle subsystems, tune camera parameters, and monitor sensor data simultaneously.
 
---------------------------------------------------------------------------------
-4. Communication Flow
---------------------------------------------------------------------------------
-
-ASCII diagram of the end-to-end flow:
-
-     +-------------+          HTTP (JSON/NDJSON)          +----------------+
-     | Magnetometer|  <---------------------------------> | MagnetometerWorker |
-     | ESP32+FXOS  |                                     +----------------+
-           ^
-           |
-Wi-Fi      |  HTTP MJPEG Stream
-           v
-     +-------------+                                     +----------------+
-     |  ESP32-CAM  |  <---------------------------------> |  CameraWorker  |
-     +-------------+                                     +----------------+
-                                                              |
-                                                              |  Frame, Detections, QR Codes
-                                                              v
-                                                      +--------------------+
-                                                      | PyQt6 GUI Interface|
-                                                      +--------------------+
-                                                              |
-                                                              v
-                                                      +--------------------+
-                                                      | User Interaction   |
-                                                      +--------------------+
 
 --------------------------------------------------------------------------------
-5. Setup Instructions
+4. Setup Instructions
 --------------------------------------------------------------------------------
 
 1. Install dependencies
